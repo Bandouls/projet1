@@ -1,0 +1,16 @@
+stage('Checkout Code') {}
+  stage('Build') {}
+  parallel(
+    stage('Sonar Analysis') {}
+    stage('CLM Analysis') {}
+    stage('Security Analysis') {}
+  )
+  stage('Build Docker Image') {}
+  ...
+  ...
+  stage('QA Deploy') {}
+  stage('QA Routing') {}
+  ...
+  ...
+  stage('Prod Deploy') {}
+  stage('Prod Routing') {}
